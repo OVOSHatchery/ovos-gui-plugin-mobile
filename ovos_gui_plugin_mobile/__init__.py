@@ -13,7 +13,8 @@ class MobileExtension(GUIExtension):
        permanent (bool): disable unloading of GUI skills on gui client disconnections
    """
 
-    def __init__(self, bus, gui, config, preload_gui=True, permanent=True):
+    def __init__(self, config, bus=None, gui=None,
+                 preload_gui=True, permanent=True):
         LOG.info("Mobile: Initializing")
         super().__init__(bus, gui, config, preload_gui, permanent)
 
